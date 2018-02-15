@@ -43,8 +43,8 @@ for ($i=0; $input_length > $i ; $i++) {
 }
  //print_r($input_array);
 
-$separado = implode(",", $input_array);
-echo $separado . "<br>";
+$numbers = implode(",", $input_array);
+echo $numbers . "<br>";
 
 for ($i=0; $i < $input_length ; $i++) {
   $ascii=$input_array[$i];

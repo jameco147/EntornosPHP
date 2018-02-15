@@ -33,8 +33,8 @@ for ($i=0; $input_length > $i ; $i++) {
 }
 
 //esto muestra el código numérico ascii de cada caracter
-$separado = implode(",", $input_array);
-echo $separado . "<br><br>";
+$numbers = implode(",", $input_array);
+echo $numbers . "<br><br>";
 
 //esto muestra los caracteres que entregaremos al resto de compañeros
 for ($i=0; $i < $input_length ; $i++) {
