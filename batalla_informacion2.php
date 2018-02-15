@@ -14,32 +14,45 @@ for ($i=0; $input_length > $i ; $i++) {
 
   if ($char_val + $fmove > $max) {
     $a = $char_val + $fmove - $max;
+    print "charval: ".$char_val."<br>";
+    print "fmove: ".$fmove."<br>";
     $result = $min - 1 + $a;
+    print "=".$result." "."<br>";
 
 //el siguiente if es por si supera los 122 en la primera pasada.
     if ($result > $max) {
       $a = $result - $max;
+      print "charval: ".$char_val."<br>";
+      print "fmove: ".$fmove."<br>";
       $result = $min - 1 + $a;
+      print "=".$result." "."<br>";
+
     }
     $input_array[] = $result;
   } else {
     $result = $char_val + $fmove;
     $input_array[] = $result;
-
+    print "charval: ".$char_val."<br>";
+    print "fmove: ".$fmove."<br>";
+    print "=";
+    print $char_val + $fmove . "<br>";
   }
-
+  print "charval: " . $char_val."<br>";
   $fmove = $result;
-
+  print "fmove f: " . $fmove."<br><br>";
 }
+ //print_r($input_array);
 
-//esto muestra el código numérico ascii de cada caracter
 $separado = implode(",", $input_array);
-echo $separado . "<br><br>";
+echo $separado . "<br>";
 
-//esto muestra los caracteres que entregaremos al resto de compañeros
 for ($i=0; $i < $input_length ; $i++) {
   $ascii=$input_array[$i];
   echo "<b>" . chr($ascii) . "</b>";
 
 }
+
+
+
+
 ?>
